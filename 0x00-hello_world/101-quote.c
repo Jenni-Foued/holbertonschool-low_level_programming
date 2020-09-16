@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include <unistd.h>
 /**
  * main - Entry point
@@ -9,8 +8,7 @@
 int main(void)
 {
 int len;
-char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-len = strlen(msg);
-fwrite(msg, 1, len, stderr);
+len = sizeof("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", len);
 return (1);
 }
