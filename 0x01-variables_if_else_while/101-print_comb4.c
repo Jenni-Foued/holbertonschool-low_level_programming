@@ -11,23 +11,23 @@ int main(void)
 int i;
 int j;
 int k;
-int x;
-int y;
-x = 49;
-y = 50;
 
 for (i = 48; i < 58; i++)
 {
-for (j = x; j < 58; j++)
+for (j = 48; j < 58; j++)
 {
-for (k = y; k < 58; k++)
+for (k = 48; k < 58; k++)
 {
-if ((i != j) && (i != k) && (j != k))
+if (i != j && i != k && j < k && i < j)
 {
 putchar(i);
 putchar(j);
 putchar(k);
-if (!((i == 55) && (j == 56) && (k == 57)))
+if (i == 7)
+{
+break;
+}
+if (!(i == 55 && j == 56 && k == 57))
 {
 putchar(44);
 putchar(32);
@@ -35,8 +35,6 @@ putchar(32);
 }
 }
 }
-y = y + 1;
-x = x + 1;
 }
 putchar('\n');
 return (0);
