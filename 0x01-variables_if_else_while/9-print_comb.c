@@ -1,23 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Print all possible combination of 2 digits .
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-int i;
-int j;
+int i = 0;
 
-for (i = 57; i > 47; i--)
+while (i < 100)
 {
-for (j = 57; i > 47; j--)
-{
-putchar(i);
-putchar(j);
+putchar('0' + i / 10);
+putchar('0' + i % 10);
 putchar(',');
-}
+i++;
 }
 putchar('\n');
 return (0);
