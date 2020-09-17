@@ -2,10 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - main function
+ * main - print the last digit of a number.
  *
- * Return: Always 0
- * Description: this task comes in the project if else while in c
+ * Return: always 0 (Success)
  */
 int main(void)
 {
@@ -28,3 +27,4 @@ int main(void)
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, r);
 	}
 	return (0);
+}
