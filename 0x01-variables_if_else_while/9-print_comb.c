@@ -13,6 +13,7 @@ while (i < 100)
 {
 putchar('0' + i / 10);
 putchar('0' + i % 10);
+putchar(' ');
 putchar(',');
 i++;
 }
