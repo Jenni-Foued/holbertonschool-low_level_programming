@@ -1,20 +1,20 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
- * main - Print all possible combination of 2 digits .
+ *main - print all possible combinations of single-digit numbers
  *
- * Return: Always 0 (Success)
+ *Return: 0 (success)
  */
+
 int main(void)
 {
-int i = 0;
+int i;
 
-while (i < 100)
+for (i = 48; i < 58; i++)
 {
-putchar('0' + i / 10);
-putchar('0' + i % 10);
-putchar(',');
-i++;
+putchar(i);
+putchar(44);
+putchar(32);
 }
 putchar('\n');
 return (0);
