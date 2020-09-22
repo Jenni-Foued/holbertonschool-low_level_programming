@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * _abs: write the absolute value of an number .
- * n: the number to be tested
- * Return: n
+ * _abs - write the absolute value of an number .
+ * @n: the number to be tested.
+ * Return: (abs (n)).
  */
 int  _abs(int n)
 {
