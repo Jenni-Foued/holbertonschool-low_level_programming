@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * _isalpha: define is a character is alphabetic
- * c: the character to be tested
- * Return: - 1 if c is an alphabet 0 if not
+ * _isalpha - define is a character is alphabetic.
+ * @c: the character to be tested.
+ * Return: - 1 if c is an alphabet 0 if not.
  */
 int  _isalpha(int c)
 {
