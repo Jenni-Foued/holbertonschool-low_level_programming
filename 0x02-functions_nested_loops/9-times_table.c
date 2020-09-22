@@ -14,12 +14,20 @@ for (i = 0; i < 10; i++)
 {
 for (j = 0; j < 10; j++)
 {
-_putchar(((i * j) / 10) + '0');
-if ((i * j) > 10)
+if ((i * j) == 0)
+{
+_putchar(0 + '0');
+}
+else if (((i * j) > 0) && ((i * j) < 10))
 {
 _putchar(((i * j) % 10) + '0');
 }
-if (!(j == 9))
+else
+{
+_putchar(((i * j) / 10) + '0');
+_putchar(((i * j) % 10) + '0');
+}
+if (j != 9)
 {
 _putchar(',');
 }
