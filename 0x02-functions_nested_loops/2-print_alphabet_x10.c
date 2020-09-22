@@ -3,7 +3,7 @@
 /**
  * print_alphabet_x10 - print alphabet [a..z]
  *
- * Return: - always (0)
+ * Return: - always (void)
  */
 void print_alphabet_x10(void)
 {
