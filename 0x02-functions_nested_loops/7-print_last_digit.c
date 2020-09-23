@@ -11,13 +11,9 @@ int print_last_digit(int n)
 {
 if (n < 0)
 {
-_putchar((((n * -1) % 10) + '0'));
-return (((n * -1)) % 10);
+n = n * -1;
 }
-else
-{
-_putchar((n % 10) + '0');
-return (n % 10);
-}
-
+n = n % 10;
+_putchar(n + '0');
+return (n);
 }
