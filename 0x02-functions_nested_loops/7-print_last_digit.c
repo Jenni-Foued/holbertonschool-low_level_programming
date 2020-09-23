@@ -14,14 +14,10 @@ if (n < 0)
 _putchar((((n * -1) % 10) + '0'));
 return (((n * -1)) % 10);
 }
-else if (n > 0)
+else
 {
 _putchar((n % 10) + '0');
 return (n % 10);
 }
-else
-{
-_putchar(n + '0');
-return (n);
-}
+
 }
