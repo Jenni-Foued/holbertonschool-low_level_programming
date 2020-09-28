@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    jack_bauer();
+    more_numbers();
     return (0);
 }

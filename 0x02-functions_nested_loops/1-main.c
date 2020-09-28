@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    jack_bauer();
+    print_alphabet();
     return (0);
 }
