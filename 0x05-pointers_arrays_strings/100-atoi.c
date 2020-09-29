@@ -10,20 +10,14 @@
 
 int _atoi(char *s)
 {
-	int neg = 0, i = 0, res = 0;
+	int sign = 1, i = 0, res = 0;
 
 	while (!(s[i] <= '9' && s[i] >= '0' && s[i] != '\0'))
 	{
 		if (s[i] == '-')
 	{
-			neg++;
+			sign *= -1;
 	}
-		i++;
-	}
-
-	if (s[i] != '\0')
-	{
-		res = s[i] - 48;
 		i++;
 	}
 
@@ -33,9 +27,6 @@ int _atoi(char *s)
 		i++;
 	}
 
-	if (neg % 2 == 1)
-	{
-		res = res * -1;
-	}
+	res = res * sign;
 	return (res);
 }
