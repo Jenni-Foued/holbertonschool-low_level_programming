@@ -9,16 +9,19 @@
 char *rot13(char *s)
 {
 	int i = 0, j = 0;
-	char *string_rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm\0";
-	char *string_alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\0";
+	char string_rot13[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm\0";
+	char string_alpha[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz\0";
 
 	while (s[i] != '\0')
 	{
 		do {
 			if (s[i] == string_alpha[j])
+			{
 				s[i] = string_rot13[j];
+				break;
+			}
 			j++;
-		} while (s[i] != string_alpha[j - 1] && string_alpha[j - 1] != '\0');
+		} while (string_alpha[j] != '\0');
 		j = 0;
 		i++;
 	}
