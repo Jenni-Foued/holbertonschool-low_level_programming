@@ -14,7 +14,7 @@ void print_buffer(char *b, int size)
 	while (i < size)
 	{
 		printf("%p:", &b[i]);
-		ix = i - 10;
+		ix = i - 9;
 		while (ix < i)
 		{
 			if (ix % 2 == 0)
@@ -22,7 +22,8 @@ void print_buffer(char *b, int size)
 			printf("%x", b[ix]);
 			ix++;
 		}
-		is = i - 10;
+		printf(" ");
+		is = i - 9;
 		while (is < i)
 		{
 			if (b[is] < 127 && b[is] > 31)
