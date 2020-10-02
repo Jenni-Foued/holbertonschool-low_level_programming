@@ -9,12 +9,12 @@
 
 void print_buffer(char *b, int size)
 {
-	int i = 9, ix, is, pi;
+	int i = 10, ix, is, pi;
 
 	while (i < size)
 	{
 		printf("%p:", &b[i]);
-		ix = i - 9;
+		ix = i - 10;
 		while (ix < i)
 		{
 			if (ix % 2 == 0)
@@ -23,7 +23,7 @@ void print_buffer(char *b, int size)
 			ix++;
 		}
 		printf(" ");
-		is = i - 9;
+		is = i - 10;
 		while (is < i)
 		{
 			if (b[is] < 127 && b[is] > 31)
@@ -38,7 +38,7 @@ void print_buffer(char *b, int size)
 		}
 		printf("\n");
 		pi = i;
-		while (i < size && i - pi < 11)
+		while (i < size && i - pi < 10)
 		{
 			i++;
 		}
