@@ -19,7 +19,7 @@ void print_diagsums(int *a, int size)
 	printf("%li, ", sum);
 	sum = 0;
 
-	for (i = size - 1; i <= sizem -size +1; i += size - 1)
+	for (i = size - 1; i <= sizem - size + 1; i += size - 1)
 		sum += a[i];
 	printf("%li\n", sum);
 }
