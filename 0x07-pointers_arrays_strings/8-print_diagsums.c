@@ -20,7 +20,7 @@ void print_diagsums(int *a, int size)
 
 	for (i = size - 1; i >= 0; i--)
 	{
-		sum += a[j,i];
+		sum += a[j][i];
 		j++;
 	}
 
