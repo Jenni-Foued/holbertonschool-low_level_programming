@@ -10,8 +10,8 @@
 
 int main(int argc, char *argv[])
 {
-	int cents, i, coins = 0;
-	int pieces[] = {25, 10, 5, 2, 1};
+	int cents, i = 0, coins = 0;
+	int value[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -26,10 +26,11 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	for (i = 0; i < 5 && cents; i++)
+	while (i < 5 && cents)
 	{
-		coins += cents / pieces[i];
-		cents %= pieces[i];
+		coins += cents / value[i];
+		cents %= value[i];
+		i++;
 	}
 
 	printf("%d\n", coins);
