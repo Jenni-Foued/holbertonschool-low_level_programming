@@ -10,12 +10,16 @@
 
 int main(int argc, char *argv[])
 {
+	long int mul;
+
 	if (argc != 3)
 	{
 		printf("ERROR\n");
 		return (1);
 	}
 
-	printf("%ld\n", atoi(argv[1]) * atoi(argv[2]));
+	mul = atoi(argv[1]) * atoi(argv[2]);
+	printf("%ld\n", mul);
+
 	return (0);
 }
