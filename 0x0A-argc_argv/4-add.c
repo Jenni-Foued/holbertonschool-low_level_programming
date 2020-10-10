@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  *main - print the addition of argv's numbers.
@@ -18,7 +19,7 @@ if (argc > 1)
 	{
 		for (i = 0; argv[argc][i] ; i++)
 		{
-			if (argv[argc][i] < '0' || argv[argc][i] > '9')
+			if (isdigit(argv[argc][i]) == 0)
 			{
 				printf("ERROR\n");
 				return (1);
