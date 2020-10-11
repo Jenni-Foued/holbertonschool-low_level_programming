@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	{
 		for (j = 0; argv[i][j] ; j++)
 		{
-			if (isdigit(argv[i][j]) < '0' || isdigit(argv[i][j]) > '9')
+			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
 				printf("ERROR\n");
 				return (1);
