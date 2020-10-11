@@ -1,3 +1,0 @@
-# Static libraries
-
-TBD
