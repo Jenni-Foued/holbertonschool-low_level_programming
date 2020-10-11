@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  *main - print the addition of argv's numbers.
@@ -8,29 +9,28 @@
  *Return: 0.
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int sum = 0;
-	int i;
-	int j;
+	int sum = 0, i, j;
 
 	if (argc < 2)
 	{
-		printf("%d\n", 0);
-		return (0);
+	printf("0\n");
+	return (0);
 	}
 	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		for (j = 0; argv[i][j] ; j++)
 		{
-			if (argv[i][j] < '0' || argv[i][j] > '9')
+			if (isdigit(argv[i][j]) == 0)
 			{
-				printf("Error\n");
+				printf("ERROR\n");
 				return (1);
 			}
 		}
 		sum += atoi(argv[i]);
 	}
+
 	printf("%d\n", sum);
 	return (0);
 }
