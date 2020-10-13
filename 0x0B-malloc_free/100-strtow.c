@@ -48,8 +48,10 @@ char **strtow(char *str)
 		if (tab[i] == NULL)
 		{
 			for (; i >= 0; i--)
+			{
 				free(tab[i]);
-			free(tab);
+				free(tab);
+			}
 			return (NULL);
 		}
 		for (; str[k] == ' ' ; k++)
