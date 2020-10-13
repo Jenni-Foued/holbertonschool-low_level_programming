@@ -9,17 +9,15 @@
 
 int count(char *str)
 {
-int i = 0, word = 0;
-	if (str[i] == ' ')
-		while (str[i] == ' ')
-		i++;
+int i = 0, words = 0;
+
 	while (str[i] != '\0')
 	{
-		if (str[i] == ' ')
-			word++;
+		if (str[i] != ' ' && str[i - 1] == ' ')
+			words++;
 		i++;
 	}
-	return (word);
+	return (words);
 }
 
 /**
@@ -35,7 +33,7 @@ char **strtow(char *str)
 	if (str == NULL)
 		return (NULL);
 	words = count(str);
-	tab =  malloc(sizeof(char) * words + 1);
+	tab =  malloc(sizeof(char) * words);
 	if (tab == NULL)
 		return (NULL);
 	for (; i < words; i++)
