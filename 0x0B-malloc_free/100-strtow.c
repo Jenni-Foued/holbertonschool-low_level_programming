@@ -35,18 +35,16 @@ char **strtow(char *str)
 	if (str == NULL)
 		return (NULL);
 	words = count(str);
-	tab =  malloc(sizeof(char) * words);
+	tab =  malloc(sizeof(char) * words + 1);
 	if (tab == NULL)
 		return (NULL);
-	for (i = 0; i < words; i++)
+	for (; i < words; i++)
 	{	lw = 0;
 		n = 0;
 		for (; str[j] == ' ' ; j++)
 		;
-		while (str[j] && *str != ' ')
-		{	lw++;
-			j++;
-		}
+		for (; str[j] != ' '; j++)
+			lw++;
 		lw++;
 		tab[i] = malloc(sizeof(char) * lw);
 		if (tab[i] == NULL)
@@ -56,11 +54,10 @@ char **strtow(char *str)
 			free(tab);
 			return (NULL);
 		}
-		for (; str[k] != ' ' ; k++)
+		for (; str[k] == ' ' ; k++)
 		;
-		while (str[k] && str[k] != ' ')
+		for (; str[k] != ' '; k++)
 		{	tab[i][n] = str[k];
-			k++;
 			n++;
 		}
 		tab[i][n] = '\0';
