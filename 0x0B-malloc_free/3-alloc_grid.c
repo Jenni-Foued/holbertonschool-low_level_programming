@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- *alloc_grid - allocate a multidimensional array.
- *@width: array's width.
- *@height: array's height.
- *Return: pointer to array.
+ *alloc_grid - allocate a grid of zeros.
+ *@width: grid's width.
+ *@height: grid's height.
+ *Return: pointer to grid.
  */
 
 int **alloc_grid(int width, int height)
