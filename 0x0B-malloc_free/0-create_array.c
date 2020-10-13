@@ -8,7 +8,7 @@
  *Return: pointer to char if success.
  */
 
-char *create_array(unsigned int size, char c)
+char *create_array(unsigned int size, __attribute__((unused))char c)
 {
 	char *tmp;
 
