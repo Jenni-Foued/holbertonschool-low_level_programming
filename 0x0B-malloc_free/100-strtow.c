@@ -33,7 +33,7 @@ char **strtow(char *str)
 	if (str == NULL)
 		return (NULL);
 	words = count(str);
-	tab =  malloc(sizeof(char) * words + 1);
+	tab = (char **) malloc(sizeof(char) * words + 1);
 	if (tab == NULL)
 		return (NULL);
 	for (; i < words; i++)
@@ -44,7 +44,7 @@ char **strtow(char *str)
 		for (; str[j] != ' '; j++)
 			lw++;
 		lw++;
-		tab[i] = malloc(sizeof(char) * lw);
+		tab[i] = (char *) malloc(sizeof(char) * lw);
 		if (tab[i] == NULL)
 		{
 			for (; i >= 0; i--)
