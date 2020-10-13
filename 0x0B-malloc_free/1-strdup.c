@@ -15,15 +15,15 @@ char *_strdup(char *str)
 	if (str[0] == '\0')
 		return (NULL);
 
-	for (i = 0; str[i]; i++);
+	for (i = 0; str[i]; i++)
+	;
 	strcp = malloc(sizeof(char) * (i + 1));
 
 	if (strcp == NULL)
 		return (NULL);
-	
+
 	for (i = 0; str[i]; i++)
 		strcp[i] = str[i];
 	strcp[i] = '\0';
 	return (strcp);
-	free(strcp);
 }
