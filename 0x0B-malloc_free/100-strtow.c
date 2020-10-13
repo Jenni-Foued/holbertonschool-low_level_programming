@@ -60,7 +60,7 @@ char **strtow(char *str)
 		}
 		tab[i][n] = '\0';
 	}
-	tab[i] = malloc(1);
+	tab[i] = malloc(sizeof(char));
 	tab[i] = NULL;
 	return (tab);
 }
