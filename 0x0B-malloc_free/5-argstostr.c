@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- *argstostr - later
- *@ac: also
- *@av: also
+ *argstostr - concatinate strings into a single one.
+ *@ac: number of strings
+ *@av: pointer to string.
  *Return: pointer to string.
  */
 
