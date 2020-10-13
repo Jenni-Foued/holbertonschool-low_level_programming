@@ -9,10 +9,10 @@
 
 char *_strdup(char *str)
 {
-	int i;
+	unsigned int i;
 	char *str1;
 
-	if (str[0] == '\0')
+	if (*str == '\0')
 		return (NULL);
 
 	for (i = 0; str[i]; i++)
@@ -23,7 +23,7 @@ char *_strdup(char *str)
 	if (str1 == NULL)
 		return (NULL);
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; str[i] != '\0'; i++)
 		str1[i] = str[i];
 	str1[i] = '\0';
 	return (str1);
