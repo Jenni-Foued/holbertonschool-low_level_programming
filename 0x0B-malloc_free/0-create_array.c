@@ -8,12 +8,12 @@
  *Return: pointer to char if success.
  */
 
-char *create_array(unsigned int size, __attribute__((unused))char c)
+char *create_array(unsigned int size, char c)
 {
 	char *tmp;
 
 	if (size == 0)
 		return (NULL);
-	tmp = (char *) malloc(sizeof(char) * size);
+	tmp = malloc(sizeof(char) * size);
 	return (tmp);
 }
