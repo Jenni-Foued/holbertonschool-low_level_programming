@@ -3,8 +3,8 @@
 
 /**
  *argstostr - concatinate strings into a single one.
- *@ac: number of strings
- *@av: pointer to string.
+ *@ac: number of arguments.
+ *@av: pointer to arguments vector.
  *Return: pointer to string.
  */
 
