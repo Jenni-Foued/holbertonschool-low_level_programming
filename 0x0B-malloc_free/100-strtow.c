@@ -33,7 +33,7 @@ char **strtow(char *str)
 	if (str == NULL)
 		return (NULL);
 	words = count(str);
-	tab =  malloc(sizeof(char) * words);
+	tab =  malloc(sizeof(char) * words + 1);
 	if (tab == NULL)
 		return (NULL);
 	for (; i < words; i++)
@@ -60,5 +60,7 @@ char **strtow(char *str)
 		}
 		tab[i][n] = '\0';
 	}
+	tab[i] = malloc(1);
+	tab[i] = NULL;
 	return (tab);
 }
