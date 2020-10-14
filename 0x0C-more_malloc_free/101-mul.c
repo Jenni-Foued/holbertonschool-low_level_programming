@@ -62,16 +62,15 @@ int _isNumber(char *argv)
 
 int main(int argc, char *argv[])
 {
-	int mul;
+	int mul, i;
+	char E[6]={'E','r','r','o','r','\n'};
 
 	if (argc != 3 || _isNumber(argv[1]) == 1 || _isNumber(argv[2]) == 1)
 	{
-		_putchar('E');
-		_putchar('r');
-		_putchar('r');
-		_putchar('o');
-		_putchar('r');
-		_putchar('\n');
+		for (i = 0; i < 6; i++)
+		{
+			_putchar(E[i]);
+		}
 		exit(98);
 	}
 	mul = _atoi(argv[1]) * _atoi(argv[2]);
