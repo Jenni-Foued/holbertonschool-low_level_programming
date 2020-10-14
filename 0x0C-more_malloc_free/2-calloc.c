@@ -10,7 +10,7 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *tab;
+	char *tab;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
