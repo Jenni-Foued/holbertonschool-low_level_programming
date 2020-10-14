@@ -2,9 +2,7 @@
 #include <stdlib.h>
 
 /**
- * _realloc - reallocate the size of an array
- * from old_size to new_size.
- *
+ * _realloc - reallocates a memory block.
  * @old_size: old size of ptr.
  * @new_size: new size of ptr.
  * @ptr: array.
@@ -13,24 +11,37 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
+	char *new_ptr;
+	unsigned int i, n;
+
+	if (new_size == old_size)
+		return (ptr);
 
 	if (ptr == NULL)
 	{
-		if (new_size == 0)
-			return (NULL);
 		ptr = malloc(new_size);
+		if (ptr == NULL)
+			return (NULL);
+		return (ptr);
 	}
-	else
-	{
-	if (new_size == 0)
+	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	else if (new_size > old_size)
+	new_ptr = malloc(new_size);
+	if (new_ptr == NULL)
+		return (NULL);
+	if (new_size > old_size)
+		n = old_size;
+	else
+		n = new_size;
+
+	for (i = 0; i < n; i++)
 	{
-		ptr = malloc(new_size);
+		new_ptr[i] = ((char *)ptr)[i];
 	}
-	}
+	free(ptr);
+	ptr = new_ptr;
 	return (ptr);
 }
