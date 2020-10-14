@@ -5,7 +5,7 @@
  * print_number - print a number.
  * @nb: number to print.
  **/
-void print_number(long long int nb)
+void print_number(int nb)
 {
 	if (nb < 10)
 	{
@@ -28,8 +28,8 @@ void print_number(long long int nb)
 
 int _atoi(char *s)
 {
-	long long int i = 0;
-	long long int res = 0;
+	int i = 0;
+	unsigned int res = 0;
 
 	while (s[i] <= '9' && s[i] >= '0' && s[i] != '\0')
 	{
@@ -62,7 +62,7 @@ int _isNumber(char *argv)
 
 int main(int argc, char *argv[])
 {
-	long long int mul;
+	int mul;
 
 	if (argc != 3 || _isNumber(argv[1]) == 1 || _isNumber(argv[2]) == 1)
 	{
