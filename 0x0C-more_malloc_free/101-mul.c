@@ -129,7 +129,7 @@ void print_array(char *a, int nb)
 {
 	int i = 0;
 
-	while (a[i] == '0')
+	while (a[i] == '0' && (i + 1) < nb)
 	{
 		i++;
 	}
