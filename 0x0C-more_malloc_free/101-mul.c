@@ -104,15 +104,11 @@ char *a3, int lenres)
 			k--;
 		}
 		mul += a3[k] - '0';
-		if (mul > 9)
+		while (mul != 0)
 		{
 			a3[k] = mul % 10 + '0';
 			mul /= 10;
-			a3[k - 1] = mul + '0';
-		}
-		else
-		{
-			a3[k] = mul + '0';
+			k++;
 		}
 		mul = 0;
 		c++;
@@ -153,7 +149,6 @@ int main(int argc, char *argv[])
 	char E[6] = {'E', 'r', 'r', 'o', 'r', '\n'};
 	char *tab1, *tab2, *tabres;
 
-	/*test if we have less or more than 3 arguments and if arguments are numbers*/
 	if (argc != 3 || _isNumber(argv[1]) == 1 || _isNumber(argv[2]) == 1)
 	{
 		for (i = 0; i < 6; i++)
@@ -165,15 +160,34 @@ int main(int argc, char *argv[])
 	for (len1 = 0; argv[1][len1]; len1++)
 	;
 	tab1 = create_array(argv, 1, len1);
+	if (tab1 == NULL)
+	{
+		free(tab1);
+		return (0);
+	}
 	for (len2 = 0; argv[2][len2]; len2++)
 	;
 	tab2 = create_array(argv, 2, len2);
+	if (tab2 == NULL)
+	{
+		free(tab1);
+		free(tab2);
+		return (0);
+	}
 	lenres = len1 + len2;
 	tabres = _calloc(lenres, sizeof(int));
+	if (tabres == NULL)
+	{
+		free(tab1);
+		free(tab2);
+		free(tabres);
+		return (0);
+	}
 	tabres = mul_array(tab1, len1, tab2, len2, tabres, lenres);
 	print_array(tabres, lenres);
 	free(tab1);
 	free(tab2);
 	free(tabres);
+	exit(EXIT_SUCCESS);
 	return (0);
 }
