@@ -132,7 +132,7 @@ int main(int argc, char *argv[])
 	;
 	for (len2 = 0; argv[2][len2]; len2++)
 	;
-	lenres = len1 + len2 + 1;
+	lenres = len1 + len2;
 	tabres = _calloc(lenres, sizeof(int));
 	if (tabres == NULL)
 	{
@@ -141,7 +141,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = len2 - 1, c = 0; i >= 0; i--)
 	{
-	tabres = mul_array(argv[1], len1, argv[2][i], tabres, (lenres - 1 - c));
+	tabres = mul_array(argv[1], len1, argv[2][i], tabres, (lenres -1 - c));
 	c++;
 	}
 	print_array(tabres, lenres);
