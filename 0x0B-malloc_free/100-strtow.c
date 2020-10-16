@@ -11,6 +11,10 @@ int count(char *str)
 {
 int i = 0, words = 0;
 
+	while (str[i] == ' ')
+	{
+		i++;
+	}
 	while (str[i] != '\0')
 	{
 		if (str[i] != ' ' && (str[i + 1] == '\0'|| str[i + 1] == ' '))
@@ -32,10 +36,6 @@ char **strtow(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	while (*str == ' ')
-	{
-		str++;
-	}
 	words = count(str);
 	tab = (char **) malloc(sizeof(char) * words + 1);
 	if (tab == NULL)
