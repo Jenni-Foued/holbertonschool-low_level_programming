@@ -172,8 +172,8 @@ int main(int argc, char *argv[])
 	tabres = _calloc(lenres, sizeof(int));
 	tabres = mul_array(tab1, len1, tab2, len2, tabres, lenres);
 	print_array(tabres, lenres);
-	free (tab1);
-	free (tab2);
-	free (tabres);
+	free(tab1);
+	free(tab2);
+	free(tabres);
 	return (0);
 }
