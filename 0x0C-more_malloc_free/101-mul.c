@@ -58,31 +58,31 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  * mul_array - multiply two arrays.
  * @a1: first array.
  * @len1: length of array a1.
- * @a2: second array.
- * @len2: length of array a2.
+ * @a2:  char.
  * @a3: array for result.
- * @lenres: length of array a3.
+ * @lena: length of array a3.
  * Return: pointer to array.
  **/
 
 void *mul_array(char *a1, int len1, char a2, char *a3, int lena)
 {
-	int mul = 0, i;
+	int mul = 0, i, k;
 
+	k = lena;
 	for (i = len1 - 1; i >= 0 ; i--)
 	{
-		mul += (a1[i] - '0') * (a2 - '0') + (a3[lena] - '0');
-		a3[lena] = mul % 10 + '0';
+		mul += (a1[i] - '0') * (a2 - '0') + (a3[k] - '0');
+		a3[k] = (mul % 10) + '0';
 		mul /= 10;
-		lena--;
+		k--;
 	}
 
 		while (mul != 0)
 		{
-			mul += a3[lena] - '0';
-			a3[lena] = (mul % 10) + '0';
+			mul += a3[k] - '0';
+			a3[k] = (mul % 10) + '0';
 			mul /= 10;
-			lena--;
+			k--;
 		}
 
 	return (a3);
@@ -132,7 +132,6 @@ int main(int argc, char *argv[])
 	;
 	for (len2 = 0; argv[2][len2]; len2++)
 	;
-
 	lenres = len1 + len2 + 1;
 	tabres = _calloc(lenres, sizeof(int));
 	if (tabres == NULL)
@@ -140,9 +139,9 @@ int main(int argc, char *argv[])
 		free(tabres);
 		return (0);
 	}
-	for (i = len2, c = 0; i >= 0; i--)
+	for (i = len2 - 1, c = 0; i >= 0; i--)
 	{
-	tabres = mul_array(argv[1], len1, argv[2][i], tabres, lenres - 1 - c);
+	tabres = mul_array(argv[1], len1, argv[2][i], tabres, (lenres - 1 - c));
 	c++;
 	}
 	print_array(tabres, lenres);
