@@ -31,29 +31,6 @@ int _isNumber(char *argv)
 	return (0);
 }
 
-
-/**
- * create_array - allocate an array of integers.
- * @argv: string to convert into array of integers.
- * @argc: the  string's number.
- * @length: Number of elements of array.
- * Return: pointer to array.
- **/
-void *create_array(char **argv, int argc, unsigned int length)
-{
-	char *tab;
-	unsigned int i;
-
-	tab = malloc(sizeof(int) * length);
-	if (tab == NULL)
-		return (NULL);
-	for (i = 0; i < length; i++)
-	{
-		tab[i] = (argv[argc][i]);
-	}
-	return (tab);
-}
-
 /**
  *_calloc - allocate array of size * nmemb.
  * @nmemb: number of elements.
@@ -88,34 +65,28 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  * Return: pointer to array.
  **/
 
-void *mul_array(char *a1, int len1, char *a2, int len2,
-char *a3, int lenres)
+void *mul_array(char *a1, int len1, char a2, char *a3, int lena)
 {
-	int k, mul = 0, c = 0;
-	int i, j;
+	int mul = 0, i;
 
-	for (i = len1 - 1; i >= 0; i--)
-	{	k = lenres - 1 - c;
-		for (j = len2 - 1; j >= 0; j--)
-		{
-			mul += (a1[i] - '0') * (a2[j] - '0');
-			a3[k] = mul % 10 + '0';
-			mul /= 10;
-			k--;
-		}
-		mul += a3[k] - '0';
+	for (i = len1 - 1; i >= 0 ; i--)
+	{
+		mul += (a1[i] - '0') * (a2 - '0') + (a3[lena] - '0');
+		a3[lena] = mul % 10 + '0';
+		mul /= 10;
+		lena--;
+	}
+
 		while (mul != 0)
 		{
-			a3[k] = mul % 10 + '0';
+			mul += a3[lena] - '0';
+			a3[lena] = (mul % 10) + '0';
 			mul /= 10;
-			k++;
+			lena--;
 		}
-		mul = 0;
-		c++;
-	}
+
 	return (a3);
 }
-
 /**
  * print_array - print all digits of array.
  * @nb: number of elements to print.
@@ -145,9 +116,9 @@ void print_array(char *a, int nb)
 
 int main(int argc, char *argv[])
 {
-	int i, len1, len2, lenres;
+	int i, c, len1, len2, lenres;
 	char E[6] = {'E', 'r', 'r', 'o', 'r', '\n'};
-	char *tab1, *tab2, *tabres;
+	char *tabres;
 
 	if (argc != 3 || _isNumber(argv[1]) == 1 || _isNumber(argv[2]) == 1)
 	{
@@ -159,34 +130,22 @@ int main(int argc, char *argv[])
 	}
 	for (len1 = 0; argv[1][len1]; len1++)
 	;
-	tab1 = create_array(argv, 1, len1);
-	if (tab1 == NULL)
-	{
-		free(tab1);
-		return (0);
-	}
 	for (len2 = 0; argv[2][len2]; len2++)
 	;
-	tab2 = create_array(argv, 2, len2);
-	if (tab2 == NULL)
-	{
-		free(tab1);
-		free(tab2);
-		return (0);
-	}
-	lenres = len1 + len2;
+
+	lenres = len1 + len2 + 1;
 	tabres = _calloc(lenres, sizeof(int));
 	if (tabres == NULL)
 	{
-		free(tab1);
-		free(tab2);
 		free(tabres);
 		return (0);
 	}
-	tabres = mul_array(tab1, len1, tab2, len2, tabres, lenres);
+	for (i = len2, c = 0; i >= 0; i--)
+	{
+	tabres = mul_array(argv[1], len1, argv[2][i], tabres, lenres - 1 - c);
+	c++;
+	}
 	print_array(tabres, lenres);
-	free(tab1);
-	free(tab2);
 	free(tabres);
 	exit(EXIT_SUCCESS);
 	return (0);
