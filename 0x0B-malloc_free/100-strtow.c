@@ -48,7 +48,7 @@ char **strtow(char *str)
 		{
 			for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
 			;
-			tab[c] = (char *)malloc((j + 1) * sizeof(char));
+			tab[c] = (char *)malloc((j) * sizeof(char));
 			if (tab[c] == NULL)
 			{
 				for (k = 0; k < c; k++)
