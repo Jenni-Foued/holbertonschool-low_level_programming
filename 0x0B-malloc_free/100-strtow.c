@@ -32,13 +32,13 @@ int count(char *str)
 char **strtow(char *str)
 {
 	char **tab;
-	int words, i, j, c = 0, k;
+	int words, i = 0, j, c = 0, k;
 
 	words = count(str);
 	if (words == 0)
 		return (NULL);
 
-	tab = malloc(sizeof(char) * (words + 1));
+	tab = (char **)malloc(sizeof(char *) * (words + 1));
 	if (tab == NULL)
 		return (NULL);
 /* Copy the string str's content into the array tab */
@@ -46,9 +46,9 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 		{
-			for (j = 1; str[i + j] != ' ' && str[i + j]; i++)
+			for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
 			;
-			tab[c] = malloc((j + 1) * sizeof(char));
+			tab[c] = (char *)malloc((j + 1) * sizeof(char));
 			if (tab[c] == NULL)
 			{
 				for (k = 0; k < c; k++)
@@ -66,7 +66,7 @@ char **strtow(char *str)
 			i++;
 	}
 
-	tab[words - 1] = malloc(sizeof(char));
-	tab[i] = NULL;
+	tab[words] = malloc(sizeof(char));
+	tab[words] = NULL;
 	return (tab);
 }
