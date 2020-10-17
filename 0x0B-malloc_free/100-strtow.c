@@ -41,7 +41,6 @@ char **strtow(char *str)
 	tab = (char **)malloc(sizeof(char *) * (words));
 	if (tab == NULL)
 		return (NULL);
-/* Copy the string str's content into the array tab */
 	while (str[i])
 	{
 		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
