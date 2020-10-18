@@ -9,14 +9,14 @@
 
 void print_number(int n)
 {
-	int x, i = 1;
+	unsigned int x, i = 1, y;
 
 	if (n < 0)
 	{
 	_putchar('-');
-	n = -n;
+	y = - n;
 	}
-	x = n;
+	x = y;
 	if (n == 0)
 		_putchar('0');
 	else
@@ -28,10 +28,10 @@ void print_number(int n)
 		}
 		while (i > 1)
 		{
-			_putchar((n / i) + '0');
-			n %= i;
+			_putchar((y / i) + '0');
+			y %= i;
 			i /= 10;
 		}
-		_putchar(n + '0');
+		_putchar(y + '0');
 	}
 }
