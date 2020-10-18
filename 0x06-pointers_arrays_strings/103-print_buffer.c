@@ -10,6 +10,8 @@ void print_buffer(char *b, int size)
 {
 	int i, pi, c;
 
+	if (size <= 0)
+		printf("\n");
 	for (i = 9, pi = 0; i < size; i += 10)
 	{	printf("%.8x: ", pi);
 		for (c = pi; c <= i ; c++)
@@ -22,8 +24,7 @@ void print_buffer(char *b, int size)
 			if (b[c] < 32)
 				printf(".");
 			else
-				printf("%c", b[c]);
-		}
+				printf("%c", b[c]);	}
 		printf("\n");
 		pi = i + 1;
 	}
@@ -46,6 +47,5 @@ void print_buffer(char *b, int size)
 			else
 				printf("%c", b[i]);
 		}
-		printf("\n");
-	}
+		printf("\n");	}
 }
