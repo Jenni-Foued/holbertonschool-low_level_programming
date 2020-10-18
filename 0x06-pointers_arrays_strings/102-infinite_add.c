@@ -32,7 +32,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	s = size_r - 1;
 	r[s] = '\0';
 	s--;
-	for (;s >= 0; s--, len1--, len2--)
+	for (; s >= 0; s--, len1--, len2--)
 	{
 		if (len1 >= 0)
 		{
