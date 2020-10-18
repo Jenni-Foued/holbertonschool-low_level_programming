@@ -15,9 +15,13 @@ void print_number(int n)
 	{
 	_putchar('-');
 	y = -n;
+	x = y;
 	}
+	else
+	{
 	y = n;
 	x = y;
+	}
 	if (n == 0)
 		_putchar('0');
 	else
