@@ -10,6 +10,8 @@ void print_buffer(char *b, int size)
 {
 	int i, pi, c;
 
+	if (size == 0)
+		printf("\n");
 	for (i = 9, pi = 0; i < size; i += 10)
 	{	printf("%.8x: ", pi);
 		for (c = pi; c <= i ; c++)
