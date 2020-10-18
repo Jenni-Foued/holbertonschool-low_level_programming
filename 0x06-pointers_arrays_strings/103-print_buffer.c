@@ -28,7 +28,7 @@ void print_buffer(char *b, int size)
 						printf("%c", b[c]);	}
 					printf("\n");
 					pi = i + 1;	}
-		if (i > size)
+		if (pi < size - 1)
 		{	i -= 9;
 			printf("%.8x: ", i);
 			for (c = i; c < i + 10; c++)
