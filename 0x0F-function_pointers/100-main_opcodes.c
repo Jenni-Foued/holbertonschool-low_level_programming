@@ -3,8 +3,8 @@
 
 /**
  * print_opcodes - Print the opcodes of this program.
- * @a: Address of the main function.
- * @n: Number of bytes to print.
+ * @s: Address of the main function.
+ * @x: Number of bytes to print.
  **/
 void print_opcodes(char *s, int x)
 {
