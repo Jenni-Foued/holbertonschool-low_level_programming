@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stdlib.h>
 
 /**
  * array_iterator - Call for another function for each element of an array.
@@ -7,10 +8,12 @@
  * @action: Function address.
  **/
 
-void array_iterator(int *array, int size, void (*action)(int))
+void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i = 0;
+	size_t i = 0;
 
-	for (; i < size; i++)
+	if (array && action)
+	{	for (; i < size; i++)
 		action(array[i]);
+	}
 }
