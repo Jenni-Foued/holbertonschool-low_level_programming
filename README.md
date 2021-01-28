@@ -2,7 +2,8 @@
 
 ## About
 
-This repository is made during my study at Holberton school while exploring the C language, each project contains files that represents solutions to giving tasks.
+This repository is made during my study at Holberton school while exploring the low level programming(mostly C language).  
+Each project contains files that represents solutions to giving tasks.
 
 ![#CISFUN](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/212/cisfun.jpg)
 
