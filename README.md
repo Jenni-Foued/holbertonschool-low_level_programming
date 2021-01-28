@@ -4,6 +4,8 @@
 
 This repository is made during my study at Holberton school while exploring the C language, each project contains files that represents solutions to giving tasks.
 
+![#CISFUN](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/212/cisfun.jpg)
+
 Project | Description
 --- | ---
 [0x00-hello_world](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x00-hello_world) |
