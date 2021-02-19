@@ -1,8 +1,8 @@
-RM := rm -f
-CC := gcc
-SRC := main.c holberton.c
-OBJ := $(SRC:%.c=%.o)
-NAME := holberton
+RM = rm -f
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:%.c=%.o)
+NAME = holberton
 
 %.o: %.c m.h
 	$(CC) -c -o $@ $<

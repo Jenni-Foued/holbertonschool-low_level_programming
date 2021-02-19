@@ -1,9 +1,10 @@
-RM := rm -f
-CC := gcc
-SRC := main.c holberton.c
-OBJ := $(SRC:%.c=%.o)
-NAME := holberton
-CFLAGS := -Wall -Werror -Wextra -pedantic
+RM = rm -f
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:%.c=%.o)
+NAME = holberton
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
 %.o: %.c m.h
 	$(CC) -c -o $@ $<
 
