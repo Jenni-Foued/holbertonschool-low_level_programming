@@ -1,4 +1,4 @@
-.PHONY = all clean oclean fclean re
+.PHONY: all clean oclean fclean re
 CC = gcc
 SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
