@@ -32,3 +32,4 @@ Each project contains files that represents solutions to giving tasks.
 [0x15-file_io](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x15-file_io)  
 [0x17-doubly_linked_lists](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x17-doubly_linked_lists)  
 [0x18-dynamic_libraries](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x18-dynamic_libraries)  
+[0x1C-makefiles](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x1C-makefiles)
