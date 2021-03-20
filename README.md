@@ -1,4 +1,4 @@
-# holbertonschool-low_level_programming
+# Low Level Programming
 
 ## About
 
@@ -7,7 +7,12 @@ Each project contains files that represents solutions to giving tasks.
 
 ![#CISFUN](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/212/cisfun.jpg)
 
-### Projects
+## Requirements
+
+* Ubuntu 14.04 LTS
+* gcc 4.8.4
+
+## Projects
 
 [0x00-hello_world](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x00-hello_world)  
 [0x01-variables_if_else_while](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x01-variables_if_else_while)  
