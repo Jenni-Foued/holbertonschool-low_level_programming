@@ -1,4 +1,5 @@
 #include "search_algos.h"
+#include <math.h>
 
 /**
  * print_array - print the current part of the array being searched
@@ -33,14 +34,14 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t l_index, r_index, m_index;
 
-	if (size > 0 && array)
+	if (size > 0)
 	{
 		l_index = 0;
 		r_index = size - 1;
 		print_array(array, l_index, r_index);
 		while (l_index < r_index)
 		{
-			m_index = (l_index + r_index) / 2;
+			m_index = floor((l_index + r_index) / 2);
 			if (array[m_index] < value)
 				l_index = m_index + 1;
 			else if (array[m_index] > value)
