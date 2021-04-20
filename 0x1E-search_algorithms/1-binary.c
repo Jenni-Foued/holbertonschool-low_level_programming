@@ -33,7 +33,7 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t l_index, r_index, m_index;
 
-	if (size > 0)
+	if (size > 0 && array)
 	{
 		l_index = 0;
 		r_index = size - 1;
