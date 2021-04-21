@@ -6,7 +6,7 @@
  * or to the end of the list
  *
  * @list: pointer to the list
- * @index: target index to move 
+ * @index: target index to move
  *
  * Return: pointer to the node that node's index equal to index'
  */
@@ -39,22 +39,26 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		jump = sqrt(size);
 		l_pointer = list;
 		r_pointer = next_element(l_pointer, jump);
-		printf("Value checked at index [%ld] = [%d]\n", r_pointer->index, r_pointer->n);
+		printf("Value checked at index [%ld] = [%d]\n"
+				, r_pointer->index, r_pointer->n);
 		while (r_pointer->index < (size - 1) && r_pointer->n < value)
 		{
 			l_pointer = r_pointer;
 			r_pointer = next_element(l_pointer, r_pointer->index + jump);
-			printf("Value checked at index [%ld] = [%d]\n", r_pointer->index, r_pointer->n);
+			printf("Value checked at index [%ld] = [%d]\n"
+					, r_pointer->index, r_pointer->n);
 		}
 		printf("Value found between indexes [%ld] and [%ld]\n"
-		       ,l_pointer->index, r_pointer->index);
-		printf("Value checked at index [%ld] = [%d]\n", l_pointer->index, l_pointer->n);
+		       , l_pointer->index, r_pointer->index);
+		printf("Value checked at index [%ld] = [%d]\n"
+				, l_pointer->index, l_pointer->n);
 		while (l_pointer->index < size - 1 && l_pointer->n < value)
 		{
 			l_pointer = l_pointer->next;
 			if (l_pointer == NULL)
 				return (NULL);
-			printf("Value checked at index [%ld] = [%d]\n", l_pointer->index, l_pointer->n);
+			printf("Value checked at index [%ld] = [%d]\n"
+					, l_pointer->index, l_pointer->n);
 		}
 		if (l_pointer->n == value)
 			return (l_pointer);
