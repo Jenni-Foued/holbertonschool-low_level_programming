@@ -4,6 +4,8 @@
 
 This is a follow up project on (0x05-pointers_arrays_strings)[https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x05-pointers_arrays_strings]
 
+## Files & Descriptions
+
 [0-strcat.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x06-pointers_arrays_strings/0-strcat.c)</br>
 [1-strncat.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x06-pointers_arrays_strings/1-strncat.c)</br>
 [2-strncpy.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x06-pointers_arrays_strings/2-strncpy.c)</br>
