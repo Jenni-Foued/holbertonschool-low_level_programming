@@ -39,8 +39,8 @@ Here is a list of what i'm allowed and not allowed to use:
    - Your code should be written at line 19, before the ;
    - Do not remove anything from the initial code (not even the comments)
    - and don’t change anything but the line of code you are adding (don’t change the spaces to tabs!)
-   - You are allowed to use the standard library
-</br>
+   - You are allowed to use the standard library</br>
+
 [102-infinite_add.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x06-pointers_arrays_strings/102-infinite_add.c)  a function that adds two numbers</br>
 [103-print_buffer.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x06-pointers_arrays_strings/103-print_buffer.c)  a function that prints a buffer</br>
 [_putchar.c](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)
