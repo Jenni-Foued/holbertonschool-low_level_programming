@@ -10,7 +10,7 @@ Each project contains files that represents solutions to giving tasks.
 ## Requirements
 
 * Ubuntu 14.04 LTS
-* gcc 4.8.4
+* gcc 4.8.4 using the options -Wall -Werror -Wextra -pedantic
 
 ## Projects
 
