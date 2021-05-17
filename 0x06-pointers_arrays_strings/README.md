@@ -28,7 +28,7 @@ The _strncat function is similar to the _strcat function, except that
 
 [8-rot13.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x06-pointers_arrays_strings/8-rot13.c)  a function that encodes a string using rot13</br>
 [100-print_number.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x06-pointers_arrays_strings/100-print_number.c)  a function that prints an integer</br>
-[101-magic.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x06-pointers_arrays_strings/101-magic.c)  Adding one line to (this code)[https://github.com/holbertonschool/make_magic_happen/blob/master/magic.c], so that the program prints a[2] = 98, followed by a new line.</br>
+[101-magic.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x06-pointers_arrays_strings/101-magic.c)  Adding one line to [this code](https://github.com/holbertonschool/make_magic_happen/blob/master/magic.c), so that the program prints a[2] = 98, followed by a new line.</br>
 
 Here is a list of what i'm allowed and not allowed to use:
    - You are not allowed to use the variable a in your new line of code
