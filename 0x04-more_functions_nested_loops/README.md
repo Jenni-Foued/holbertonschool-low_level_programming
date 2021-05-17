@@ -13,7 +13,7 @@
 
 ## Files & Descriptions
 
-[_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)</br>
+[_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)  a function that prints one character to the stdout(Used as given)</br> 
 [0-isupper.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x04-more_functions_nested_loops/0-isupper.c)  a function that checks for uppercase character</br>
 
 [1-isdigit.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x04-more_functions_nested_loops/1-isdigit.c)  a function that checks for a digit (0 through 9)</br>
