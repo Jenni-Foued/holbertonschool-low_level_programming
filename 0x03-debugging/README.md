@@ -1,4 +1,4 @@
-# <div align="center">0x03. C - Debugging</>
+# <div align="center">0x03. C - Debugging</div>
 
 ## About
 
