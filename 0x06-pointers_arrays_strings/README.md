@@ -2,7 +2,7 @@
 
 ## About
 
-This is a follow up project on (0x05-pointers_arrays_strings)[https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x05-pointers_arrays_strings]
+This is a follow up project on [0x05-pointers_arrays_strings](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x05-pointers_arrays_strings)
 
 ## Files & Descriptions
 
