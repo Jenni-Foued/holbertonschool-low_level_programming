@@ -6,7 +6,7 @@ First interaction with C, using some basic functions like **printf**, **puts** a
 
 File | Description
 --- | ---
-[0-preprocessor](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/blob/master/0x00-hello_world/0-preprocessor)
+[0-preprocessor](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/blob/master/0x00-hello_world/0-preprocessor) | A bash script that runs a C file through the preprocessor and save the result into another file
 [1-compiler](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/blob/master/0x00-hello_world/1-compiler)
 [2-assembler](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/blob/master/0x00-hello_world/2-assmebler)
 [3-name](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/blob/master/0x00-hello_world/3-name)
