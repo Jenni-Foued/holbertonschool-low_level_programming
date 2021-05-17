@@ -43,4 +43,4 @@ Here is a list of what i'm allowed and not allowed to use:
 
 [102-infinite_add.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x06-pointers_arrays_strings/102-infinite_add.c)  a function that adds two numbers</br>
 [103-print_buffer.c](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x06-pointers_arrays_strings/103-print_buffer.c)  a function that prints a buffer</br>
-[_putchar.c](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)
+[_putchar.c](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c) this function is used to print one character
