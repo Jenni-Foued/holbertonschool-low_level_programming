@@ -9,7 +9,7 @@
 
 [libholberton.a](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x09-static_libraries/libholberton.a)  static library containing all the functions listed below
 
-'''
+```
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
@@ -30,7 +30,7 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
-'''
+```
 
 [holberton.h](https://github.com/Jenni-Foued/holbertonschool-low_level_programming/tree/master/0x09-static_libraries/holberton.h)  contain all the prototypes of the above functions
 
