@@ -2,7 +2,7 @@
 
 ## About
 
-   -How to build and use linked lists
+   - How to build and use linked lists
 
 ## Files & Descriptions
 
